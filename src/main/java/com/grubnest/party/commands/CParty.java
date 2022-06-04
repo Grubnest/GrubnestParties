@@ -19,11 +19,10 @@ public class CParty implements CommandExecutor {
 
     PartyManager pm = plugin.getPartyManager();
 
-    //TODO: Add in the "/party set" branch to allow for leader and name to be changed.
+    //TODO: Add in the option to change party name.
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (sender instanceof Player player) {
-            if (player.hasPermission("kazanjima.commands.party")) {
                 Party p = pm.getParty(player);
                 if (args.length > 0) {
                     for (Player target : Bukkit.getOnlinePlayers()) {
@@ -195,7 +194,6 @@ public class CParty implements CommandExecutor {
                     }
                 }
             }
-        }
         return true;
     }
 }
