@@ -8,7 +8,7 @@ import net.md_5.bungee.api.chat.hover.content.Text;
 
 import org.bukkit.entity.Player;
 
-public class messages {
+public class Messages {
     public static void createClickableCommand(Player player, String message, String command){
         //Creates a new text component that will translate color code hopefully of our message.
         TextComponent component = new TextComponent(TextComponent.fromLegacyText(ChatColor.translateAlternateColorCodes('&', message)));

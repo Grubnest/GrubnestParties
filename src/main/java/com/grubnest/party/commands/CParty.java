@@ -4,7 +4,7 @@ import com.grubnest.party.Main;
 import com.grubnest.party.gui.PartyGUI;
 import com.grubnest.party.other.Party;
 import com.grubnest.party.other.PartyManager;
-import com.grubnest.party.util.messages;
+import com.grubnest.party.util.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -113,7 +113,7 @@ public class CParty implements CommandExecutor {
                                             pm.addInvite(player, target);
                                             String message = "You have been invited to a party by " + player.getName() + "!";
                                             String cmd = "party join " + player.getName();
-                                            messages.createClickableCommand(target, message, cmd);
+                                            Messages.createClickableCommand(target, message, cmd);
                                         }else{
                                             player.sendMessage("That player is already in a party.");
                                         }
