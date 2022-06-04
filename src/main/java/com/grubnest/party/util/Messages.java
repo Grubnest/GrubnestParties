@@ -15,7 +15,7 @@ public class Messages {
         component.setColor(ChatColor.GREEN);
         //Making our invite message hover on the screen.
         component.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text(message)));
-        //Adding a click event to our amazing component. Command would be "party join" for our purposes.
+        //Adding a click event to our amazing component.
         component.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/" + command));
         player.spigot().sendMessage(component);
     }
