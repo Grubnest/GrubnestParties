@@ -2,6 +2,8 @@ package com.grubnest.party;
 
 import com.grubnest.party.commands.CParty;
 import com.grubnest.party.events.AsyncChat;
+import com.grubnest.party.events.InventoryClick;
+import com.grubnest.party.events.InventoryDrag;
 import com.grubnest.party.other.PartyManager;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -29,6 +31,8 @@ public final class Main extends JavaPlugin {
     public void registerEvents(){
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new AsyncChat(), this);
+        pm.registerEvents(new InventoryClick(), this);
+        pm.registerEvents(new InventoryDrag(), this);
     }
     public static Main getInstance(){
         return instance;
