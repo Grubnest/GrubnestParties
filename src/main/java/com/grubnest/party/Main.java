@@ -19,6 +19,9 @@ public final class Main extends JavaPlugin {
         instance = this;
         logger = getLogger();
         partyManager = new PartyManager();
+
+        registerCommands();
+        registerEvents();
     }
 
     @Override

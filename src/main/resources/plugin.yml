@@ -5,6 +5,7 @@ api-version: 1.18
 authors: [ joannamusing ]
 description: A plugin by the Grubnest development team to handle player parties and their applications.
 website: https://grubnest.com
+
 commands:
   party:
     description: The basic party command.

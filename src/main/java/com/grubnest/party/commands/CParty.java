@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
 public class CParty implements CommandExecutor {
     private final Main plugin = Main.getInstance();
-
     PartyManager pm = plugin.getPartyManager();
 
     //TODO: Add in the option to change party name.
