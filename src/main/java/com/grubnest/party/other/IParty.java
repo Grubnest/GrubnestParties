@@ -5,7 +5,7 @@ import org.bukkit.ChatColor;
 
 import java.util.ArrayList;
 import java.util.UUID;
-
+//NOTE TO SELF: Needs to be put in com.grubnest.party.api alone with the other api.
 public interface IParty {
     /*
     This interface is designed for the party system, and holds the methods that we use to interact with our Party objects.
