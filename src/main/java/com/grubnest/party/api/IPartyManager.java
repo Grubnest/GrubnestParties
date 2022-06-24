@@ -1,6 +1,7 @@
-package com.grubnest.party.other;
+package com.grubnest.party.api;
 
 
+import com.grubnest.party.other.Party;
 import org.bukkit.entity.Player;
 
 public interface IPartyManager {

@@ -1,12 +1,13 @@
 package com.grubnest.party.other;
 
+import com.grubnest.party.api.IPartyManager;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class PartyManager implements IPartyManager{
+public class PartyManager implements IPartyManager {
     ArrayList<Party> allParties;
     HashMap<UUID, UUID> invites;
 

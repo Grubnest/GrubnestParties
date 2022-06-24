@@ -1,5 +1,6 @@
 package com.grubnest.party.other;
 
+import com.grubnest.party.api.IParty;
 import org.bukkit.entity.Player;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -7,7 +8,7 @@ import org.bukkit.ChatColor;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class Party implements IParty{
+public class Party implements IParty {
     UUID uuid;
     String name;
     ArrayList<UUID> members = new ArrayList<>();

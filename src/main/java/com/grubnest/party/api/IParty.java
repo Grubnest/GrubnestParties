@@ -1,4 +1,4 @@
-package com.grubnest.party.other;
+package com.grubnest.party.api;
 
 import org.bukkit.entity.Player;
 import org.bukkit.ChatColor;
@@ -17,7 +17,9 @@ public interface IParty {
      */
     UUID getUUID();
     /*
-    This method is to set the party UUID.
+    This will set the UUID of the party to the param input.
+
+    @param uuid You want to use a player's UUID, generally whoever the new leader is.
      */
     void setUUID(UUID uuid);
     /*
