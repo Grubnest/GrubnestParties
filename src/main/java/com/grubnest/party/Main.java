@@ -14,6 +14,7 @@ public final class Main extends JavaPlugin {
     public static Main instance;
     public static Logger logger;
     public PartyManager partyManager;
+
     @Override
     public void onEnable() {
         instance = this;
@@ -28,19 +29,23 @@ public final class Main extends JavaPlugin {
     public void onDisable() {
 
     }
-    public void registerCommands(){
+
+    public void registerCommands() {
         this.getCommand("party").setExecutor(new CParty());
     }
-    public void registerEvents(){
+
+    public void registerEvents() {
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new AsyncChat(), this);
         pm.registerEvents(new InventoryClick(), this);
         pm.registerEvents(new InventoryDrag(), this);
     }
-    public static Main getInstance(){
+
+    public static Main getInstance() {
         return instance;
     }
-    public PartyManager getPartyManager(){
+
+    public PartyManager getPartyManager() {
         return partyManager;
     }
 }
