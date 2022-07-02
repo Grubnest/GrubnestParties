@@ -122,9 +122,11 @@ public class Party implements IParty {
         string = string.replace('@', ' ');
         string = color1 + " " + player.getName() + color2 + ":" + string;
         for(UUID uuid : getMembers()) {
-            Player receiver = Bukkit.getServer().getPlayer(uuid);
-            if(receiver != null){
-                receiver.sendMessage(TAG + string);
+            if(inChat.contains(uuid)) {
+                Player receiver = Bukkit.getServer().getPlayer(uuid);
+                if (receiver != null) {
+                    receiver.sendMessage(TAG + string);
+                }
             }
         }
     }

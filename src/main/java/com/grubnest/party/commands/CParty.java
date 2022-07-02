@@ -112,6 +112,7 @@ public class CParty implements CommandExecutor {
                                             String message = "You have been invited to a party by " + player.getName() + "!";
                                             String cmd = "party join " + player.getName();
                                             Messages.createClickableCommand(target, message, cmd);
+                                            player.sendMessage("You have invited " + target.getName() + " to the party!");
                                         }else{
                                             player.sendMessage("That player is already in a party.");
                                         }
@@ -120,18 +121,21 @@ public class CParty implements CommandExecutor {
                             }
                             break;
                         case ("join"):
-                            if (args.length != 2) {
-                                player.sendMessage("/party join <Player>");
-                            }
-                            for (Player target : Bukkit.getOnlinePlayers()) {
-                                if (args[1].equalsIgnoreCase(target.getName())) {
-                                    p = pm.getParty(target);
-                                    if (pm.getInvite(target, player)) {
-                                        p.addMember(player);
-                                        pm.removeInvite(target);
-                                        player.sendMessage("You have joined the party!");
+                            if (args.length == 2) {
+                                for (Player target : Bukkit.getOnlinePlayers()) {
+                                    if (args[1].equalsIgnoreCase(target.getName())) {
+                                        p = pm.getParty(target);
+                                        if (pm.getInvite(target, player)) {
+                                            p.addMember(player);
+                                            pm.removeInvite(target);
+                                            player.sendMessage("You have joined the party!");
+                                        } else {
+                                            player.sendMessage("No invite found from that player.");
+                                        }
                                     }
                                 }
+                            }else{
+                                player.sendMessage("/party join <Player>");
                             }
                             break;
                         case ("kick"):

@@ -28,7 +28,7 @@ public class Velocity {
         CommandManager commandManager = proxyServer.getCommandManager();
         logger.info("[GrubnestParties]: Registered commands.");
 
-        proxyServer.getEventManager().register(this, new ServerHop());
+        //proxyServer.getEventManager().register(this, new ServerHop());
         logger.info("[GrubnestParties]: Registered events.");
     }
 }
